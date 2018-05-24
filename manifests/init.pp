@@ -12,5 +12,5 @@ class ntp (
 ) inherits ::ntp::params {
   class { '::ntp::install': }
   -> class { '::ntp::config': }
-  -> class { '::ntp::service': }
+  ~> class { '::ntp::service': }
 }
